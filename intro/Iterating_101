@@ -1,0 +1,63 @@
+#iterating over a list and tuple is same;
+#same syntax and method but the only difference
+#is that we cannot change the elements of a tuple
+#since it's immutable though a list is mutable
+
+list=[4,5,6,8,0]
+for i in list:
+   print(i)
+
+# in a tuple we use parentheses instead of square brackets; though the looping is same
+tuple=(8,4,3,5,2)
+for i in tuple:
+   print(i)
+
+#iterating over a string
+ print("\nString interation")
+ string="it's a beautiful day"
+ for i in string:
+     print(i)
+
+#iterating over dictionary
+print("\nDictionary Iteration")
+d=dict()
+d['0']="life"
+d['1']="is"
+d['2']="good"
+for i in d:
+    print("{}:{}".format(i,d[i]))
+
+#Iterating over a set
+print("\nSet Iteration")
+set1={6,5,4,3,2,9}
+for i in set1:
+   print(i)
+
+#using range function
+#it has 3 different formats
+#range (stop) takes one argument.
+#range (start, stop) takes two arguments.
+#range (start, stop, step) takes three arguments
+
+for index in range(len(course_list)):
+    print(course_list[index])
+
+# a list for squared elements
+
+one_list=[10,'koi',8,'bye',4,3]
+
+#one-way of doing this is using for loop
+
+squared_list=[]
+for element in one_list:
+  if(type(element)==int):
+    squared_list.append(element*element)
+print(squared_list)
+
+#second way is to write a comprehension list
+def complex_func(e):
+    return e**2
+
+squared_integers=[complex_func(e) for e in one_list if type(e)==int]
+print(squared_integers)
+
